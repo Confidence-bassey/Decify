@@ -1,24 +1,28 @@
 package com.alphainnovator.decify.core.Entities;
 
-import java.util.ArrayList;
-import java.util.List;
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+//@Entity
+//@Table(name = "admin")
 @Data
 @NoArgsConstructor
 @ToString
 public class AdminEntity {
     
+    int Id;
+    int AdminId;
+
     String firstName;
-	 String lastName;
-	 String email;
-	 String phoneNo;
-	List<String> payment = new ArrayList<String>();
-	List<String> Products = new ArrayList<String>();
-	List<String> ServiceProvider = new ArrayList<String>();
+	String lastName;
+	String email;
+	String phoneNo;
+    int payment_id;
+    int product_id;
 
     
     public AdminEntity(String firstName, String lastName, String email, String phoneNo) {

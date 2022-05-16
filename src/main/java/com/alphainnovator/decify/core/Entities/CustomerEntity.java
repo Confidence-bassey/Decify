@@ -1,13 +1,16 @@
 package com.alphainnovator.decify.core.Entities;
 
-import java.util.ArrayList;
-import java.util.List;
+
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
+//@Table(name = "customer")
+//@Entity
 @NoArgsConstructor
 @ToString
 public class CustomerEntity {
@@ -16,7 +19,7 @@ public class CustomerEntity {
     String lastName;
     String email;
     String phoneNumber;
-    List<String> orders = new ArrayList<>();
+    int order_id;
     
     public CustomerEntity(String firstName, String lastName, String email, String phoneNumber) {
         this.firstName = firstName;
