@@ -3,18 +3,26 @@ package com.alphainnovator.decify.core.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Table;
+import javax.persistence.Id;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@Table(name = "customer")
 @Entity
+@Table(name ="customer")
 @NoArgsConstructor
 @ToString
 public class CustomerEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
+    int CId;
     
     @Column(name = "firstname")
     String firstName;

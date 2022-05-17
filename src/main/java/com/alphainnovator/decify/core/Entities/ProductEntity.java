@@ -2,6 +2,9 @@ package com.alphainnovator.decify.core.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -23,8 +26,10 @@ public class ProductEntity {
     @Column(name = "description")
     String description;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id")
-    long itemId;
+    int itemId;
 
     @Column(name = "item_price")
     double ItemPrice;
