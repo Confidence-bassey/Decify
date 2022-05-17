@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-public class AddServiceProviderModel {
+public class AdminDTO {
   @Getter
   @Setter
   @NoArgsConstructor
