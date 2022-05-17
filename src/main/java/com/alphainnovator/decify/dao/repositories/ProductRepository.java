@@ -1,5 +1,9 @@
 package com.alphainnovator.decify.dao.repositories;
 
-public interface ProductRepository {
+import com.alphainnovator.decify.core.Entities.ProductEntity;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<ProductEntity, Integer>{
     
 }
