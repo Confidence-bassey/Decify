@@ -11,13 +11,14 @@ public class OrderEntity {
   private String id;
 
   private List<ProductEntity> Products;
-
+  private List<ServiceProviderEntity> serviceProviders;
+  private CustomerEntity customer;
   public OrderEntity(List<ProductEntity> products,
       List<ServiceProviderEntity> serviceProviders) {
     Products = products;
     this.serviceProviders = serviceProviders;
   }
 
-  private List<ServiceProviderEntity> serviceProviders;
+
 
 }

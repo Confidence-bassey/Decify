@@ -26,10 +26,6 @@ public class ServiceProviderModelDTO {
 
     private  boolean isBooked;
 
-    private AdminDTO.Input adminEntity;
-
-    private CustomerDTO.Input customerEntity;
-
   }
   @Getter
   @Setter

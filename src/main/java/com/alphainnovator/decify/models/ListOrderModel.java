@@ -6,19 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-public class ProductDTO {
+public class ListOrderModel {
   @Getter
   @Setter
   @NoArgsConstructor
   @AllArgsConstructor
   public static class Input{
 
-    @NotNull
-    private String name;
-    @NotNull
-    private double price;
-    @NotNull
-    private String description;
+
 
   }
   @Getter
