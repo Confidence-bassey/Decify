@@ -28,9 +28,9 @@ public class CustomerController {
     @PostMapping("/create")
     public ResponseEntity<?> addTodo(HttpServletRequest request, @RequestBody CustomerEntity payload) {
         this.customerRepository.save(payload);// this._todos.add(payload);
-        List<CustomerEntity> allAmins = this.customerRepository.findAll();
+        List<CustomerEntity> allCustomers = this.customerRepository.findAll();
   
-          return ResponseEntity.ok(allAmins);
+          return ResponseEntity.ok(allCustomers);
       }
     
       @GetMapping("")
