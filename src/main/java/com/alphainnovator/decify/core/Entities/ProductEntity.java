@@ -2,9 +2,12 @@ package com.alphainnovator.decify.core.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -42,6 +45,10 @@ public class ProductEntity {
 
     @Column(name = "admin_id")
     int Admin_Id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="order_id")
+    OrderEntity order;
 
     public ProductEntity(String itemName, String description, double itemPrice) {
         this.itemName = itemName;

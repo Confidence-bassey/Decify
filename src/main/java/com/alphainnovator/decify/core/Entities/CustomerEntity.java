@@ -1,10 +1,13 @@
 package com.alphainnovator.decify.core.Entities;
 
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -48,6 +51,9 @@ public class CustomerEntity {
 
     @Column(name = "payment_id")
     int payment_id;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
+    List<ServiceProviderEntity> serviceProviders;
     
     public CustomerEntity(String firstName, String lastName, String email, String phoneNumber) {
         this.firstName = firstName;

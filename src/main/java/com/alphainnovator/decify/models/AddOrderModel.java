@@ -17,21 +17,22 @@ public class AddOrderModel {
   public static class Input{
 
     @Nullable
-  private List<ProductDTO.Input> products;
+  private List<ProductEntity> products;
 
     @Nullable
-  private List<ServiceProviderModelDTO.Input> services;
+  private List<ServiceProviderEntity> services;
 
   }
   @Getter
-  @Setter
   @NoArgsConstructor
   @AllArgsConstructor
   public static class Output{
 
-    private List<ProductDTO.Input> products;
+    private List<ProductEntity> products;
 
-    private List<ServiceProviderModelDTO.Input> services;
+    private List<ServiceProviderEntity> services;
+
+    private double total;
 
   }
 
