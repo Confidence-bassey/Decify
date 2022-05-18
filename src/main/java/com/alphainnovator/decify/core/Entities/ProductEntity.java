@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,17 +22,21 @@ import lombok.ToString;
 @ToString
 public class ProductEntity {
     
+    @JsonProperty("itemName")
     @Column(name = "item_name")
     String itemName;
 
+    @JsonProperty("Idescription")
     @Column(name = "description")
     String description;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("productId")
     @Column(name = "item_id")
     int itemId;
 
+    @JsonProperty("itemPrice")
     @Column(name = "item_price")
     double ItemPrice;
 

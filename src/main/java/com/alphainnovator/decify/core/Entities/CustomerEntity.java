@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Id;
 
 import lombok.Data;
@@ -24,15 +27,19 @@ public class CustomerEntity {
     @Column(name = "customer_id")
     int CId;
     
+    @JsonProperty("firstName")
     @Column(name = "firstname")
     String firstName;
 
+    @JsonProperty("lastName")
     @Column(name = "lastname")
     String lastName;
 
+    @JsonProperty("email")
     @Column(name = "email")
     String email;
 
+    @JsonProperty("phoneNo")
     @Column(name = "phone_number")
     String phoneNumber;
 
