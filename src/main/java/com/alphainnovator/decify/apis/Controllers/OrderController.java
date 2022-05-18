@@ -2,6 +2,7 @@ package com.alphainnovator.decify.apis.Controllers;
 
 import com.alphainnovator.decify.models.AddOrderModel;
 import com.alphainnovator.decify.models.CartModel;
+import com.alphainnovator.decify.models.PaymentModel;
 import com.alphainnovator.decify.service.OrderService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,6 +27,11 @@ public class OrderController {
   public double addToCart(@RequestBody CartModel input
   ) {
     return orderService.addToCart(input);
+  }
+  @PostMapping("/pay")
+  public double payment(@RequestBody PaymentModel input
+  ) {
+    return orderService.pay(input);
   }
 }
 

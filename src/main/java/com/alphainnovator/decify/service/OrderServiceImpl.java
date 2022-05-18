@@ -8,6 +8,7 @@ import com.alphainnovator.decify.dao.repositories.ProductRepository;
 import com.alphainnovator.decify.dao.repositories.ServiceProviderRepository;
 import com.alphainnovator.decify.models.AddOrderModel;
 import com.alphainnovator.decify.models.CartModel;
+import com.alphainnovator.decify.models.PaymentModel;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import lombok.var;
@@ -69,7 +70,7 @@ public class OrderServiceImpl implements OrderService {
   }
 
   @Override
-  public double pay(double total) {
+  public double pay(PaymentModel input) {
 
     return 0;
   }
