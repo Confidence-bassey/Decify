@@ -11,8 +11,8 @@ public class ServiceProviderEntity {
   private String description;
   private double price;
   private  boolean isBooked;
-  private AdminEntity adminEntity;
-  private CustomerEntity customerEntity;
+  private int adminId;
+  private int customerId;
 
   public ServiceProviderEntity(String name, String description, double price) {
     this.name = name;

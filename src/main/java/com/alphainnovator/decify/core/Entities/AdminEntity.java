@@ -1,6 +1,5 @@
 package com.alphainnovator.decify.core.Entities;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +9,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.hibernate.annotations.GeneratorType;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
