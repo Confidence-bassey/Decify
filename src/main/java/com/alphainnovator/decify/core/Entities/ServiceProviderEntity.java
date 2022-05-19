@@ -2,8 +2,17 @@ package com.alphainnovator.decify.core.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "serviceprovider")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ServiceProviderEntity {
   @Id
   private String id;

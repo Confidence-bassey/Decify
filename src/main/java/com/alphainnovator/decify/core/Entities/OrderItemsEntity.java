@@ -9,15 +9,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "order")
+@Table(name = "order_items")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderEntity {
-  @Id
-  int id;
-  int customer_id;
-  String delivery_status;
-  double total_price;
-  double discount;
+public class OrderItemsEntity {
+
+    @Id
+    int oItem_id;
+    int product_id;
+    int order_id;
 }
