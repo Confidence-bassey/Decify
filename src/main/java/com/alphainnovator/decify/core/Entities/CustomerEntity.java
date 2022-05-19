@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -55,5 +57,9 @@ public class CustomerEntity {
         this.email = email;
         this.phoneNumber = phoneNumber;
     } 
+
+    @ManyToOne()
+    @JoinColumn(name="order_id", referencedColumnName="id", insertable=false, updatable=false)
+    private OrderEntity order;
     
 }

@@ -8,6 +8,7 @@ import com.alphainnovator.decify.core.Entities.OrderEntity;
 import com.alphainnovator.decify.dao.repositories.OrderRepository;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/order")
 public class orderController {
@@ -27,7 +29,7 @@ public class orderController {
     
     @PostMapping("/create")
     public ResponseEntity<?> addTodo(HttpServletRequest request, @RequestBody OrderEntity payload) {
-        this.orderRepository.save(payload);// this._todos.add(payload);
+        this.orderRepository.save(payload);
         List<OrderEntity> allAmins = this.orderRepository.findAll();
   
           return ResponseEntity.ok(allAmins);
