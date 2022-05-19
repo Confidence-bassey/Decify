@@ -1,18 +1,14 @@
 package com.alphainnovator.decify.service;
 
-import com.alphainnovator.decify.core.Entities.ProductEntity;
+/*import com.alphainnovator.decify.core.Entities.ProductEntity;
 import com.alphainnovator.decify.core.Entities.ServiceProviderEntity;
 import com.alphainnovator.decify.dao.repositories.OrderRepository;
 import com.alphainnovator.decify.dao.repositories.ProductRepository;
 import com.alphainnovator.decify.dao.repositories.ServiceProviderRepository;
-import com.alphainnovator.decify.models.AddOrderModel;
-import com.alphainnovator.decify.models.ListOrderModel;
-import com.alphainnovator.decify.models.ListOrderModel.Input;
-import com.alphainnovator.decify.models.ListOrderModel.Output;
 import java.util.stream.Collectors;
 import lombok.var;
 
-public class OrderServiceImpl implements OrderService {
+/*public class OrderServiceImpl implements OrderService {
   private final ServiceProviderRepository  serviceProviderRepository;
   private final ProductRepository productRepository;
   private final OrderRepository orderRepository;
@@ -52,12 +48,4 @@ public class OrderServiceImpl implements OrderService {
 
   }
 
-  @Override
-  public ListOrderModel.Output getAllOrders(ListOrderModel.Input input, String customerId) {
-
-    orderRepository.findAllByCustomerId(customerId);
-    return null;
-  }
-
-
-}
+}*/
