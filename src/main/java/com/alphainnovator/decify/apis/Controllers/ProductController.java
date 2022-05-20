@@ -8,12 +8,14 @@ import com.alphainnovator.decify.core.Entities.ProductEntity;
 import com.alphainnovator.decify.dao.repositories.ProductRepository;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -39,5 +41,4 @@ public class ProductController {
           List<ProductEntity> admins = this.productRepository.findAll();
           return ResponseEntity.ok(admins);
       }  
-    
 }
