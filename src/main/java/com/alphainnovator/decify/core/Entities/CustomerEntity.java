@@ -27,7 +27,7 @@ public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "customer_id")
-    int CId;
+    int id;
     
     @JsonProperty("firstName")
     @Column(name = "firstname")
