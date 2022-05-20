@@ -41,4 +41,5 @@ public class CartController {
           List<CartEntity> admins = this.cartRepository.findAll();
           return ResponseEntity.ok(admins);
       }
+
 }
