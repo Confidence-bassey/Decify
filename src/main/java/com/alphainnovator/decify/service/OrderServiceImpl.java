@@ -102,12 +102,6 @@ public class OrderServiceImpl extends Payments implements OrderService  {
         input.getDescription()
     );
 
-
-
-    /*=payments.pay("748rbri4823ruoqedb9h435", "2000", "daniel.oyagha@gmail.com","Daniel Oyagha", "CARD",
-        "08060335875", "NGN",
-        "https://www.Google.com", "Goods");*/
-
     return 0;
   }
 
