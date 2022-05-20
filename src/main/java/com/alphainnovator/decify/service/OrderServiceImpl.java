@@ -9,15 +9,17 @@ import com.alphainnovator.decify.dao.repositories.ServiceProviderRepository;
 import com.alphainnovator.decify.models.AddOrderModel;
 import com.alphainnovator.decify.models.CartModel;
 import com.alphainnovator.decify.models.PaymentModel;
+import core.Payments;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import lombok.var;
 
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl extends Payments implements OrderService  {
 
   private final ServiceProviderRepository serviceProviderRepository;
   private final ProductRepository productRepository;
   private final OrderRepository orderRepository;
+  static Payments payments = new Payments();
 
 
   public OrderServiceImpl(ServiceProviderRepository serviceProviderRepository,
@@ -71,6 +73,40 @@ public class OrderServiceImpl implements OrderService {
 
   @Override
   public double pay(PaymentModel input) {
+    //verify card
+
+    var verifiedCard = payments.verifyCardNumber(
+        input.getCardNumber(), input.getCurrency());
+
+    var initiatePayment =payments.initiatePayments( input.getTransRef(),
+        input.getAmount(),
+        input.getCustomerEmail(),
+        input.getCustomerName(),
+        input.getPaymentOptions(),
+        input.getCustomerPhoneNo(),
+        input.getCurrency(),
+        input.getRedirectUrl()
+        );
+
+    //make payment
+
+        var payment = payments.pay(
+        input.getTransRef(),
+        input.getAmount(),
+        input.getCustomerEmail(),
+        input.getCustomerName(),
+        input.getPaymentOptions(),
+        input.getCustomerPhoneNo(),
+        input.getCurrency(),
+        input.getRedirectUrl(),
+        input.getDescription()
+    );
+
+
+
+    /*=payments.pay("748rbri4823ruoqedb9h435", "2000", "daniel.oyagha@gmail.com","Daniel Oyagha", "CARD",
+        "08060335875", "NGN",
+        "https://www.Google.com", "Goods");*/
 
     return 0;
   }
