@@ -28,7 +28,7 @@ public class CartController {
     }    
 
     @PostMapping("/create")
-    public ResponseEntity<?> addTodo(HttpServletRequest request, @RequestBody CartEntity payload) {
+    public ResponseEntity<?> addToCart(HttpServletRequest request, @RequestBody CartEntity payload) {
         this.cartRepository.save(payload);// this._todos.add(payload);
         List<CartEntity> allAmins = this.cartRepository.findAll();
   
@@ -36,7 +36,7 @@ public class CartController {
       }
     
       @GetMapping("")
-      public ResponseEntity<?> getTodos(HttpServletRequest request) {
+      public ResponseEntity<?> getCartItems(HttpServletRequest request) {
   
           List<CartEntity> admins = this.cartRepository.findAll();
           return ResponseEntity.ok(admins);
